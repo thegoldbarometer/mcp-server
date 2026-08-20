@@ -1,8 +1,8 @@
 {
   "name": "thegoldbarometer-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for The Gold Barometer: today's gold buying-conditions score, the published history, and what followed similar readings since 1971.",
-  "mcpName": "io.github.paaap17/thegoldbarometer",
+  "mcpName": "io.github.thegoldbarometer/thegoldbarometer",
   "license": "MIT",
   "type": "module",
   "bin": {
