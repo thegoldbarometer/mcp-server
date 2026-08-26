@@ -1,5 +1,7 @@
 # The Gold Barometer MCP server
 
+[![The Gold Barometer MCP server](https://glama.ai/mcp/servers/thegoldbarometer/mcp-server/badge)](https://glama.ai/mcp/servers/thegoldbarometer/mcp-server)
+
 Gives AI assistants direct access to [The Gold Barometer](https://thegoldbarometer.com/):
 a daily 0-100 score of gold buying conditions, compared with every trading day since 1971.
 
