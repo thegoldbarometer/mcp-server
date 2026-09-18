@@ -6,7 +6,7 @@
     "url": "https://github.com/thegoldbarometer/mcp-server",
     "source": "github"
   },
-  "version": "1.0.1",
+  "version": "1.1.0",
   "packages": [
     {
       "registryType": "npm",
@@ -17,5 +17,11 @@
       }
     }
   ],
-  "websiteUrl": "https://thegoldbarometer.com/data/"
+  "websiteUrl": "https://thegoldbarometer.com/data/",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.thegoldbarometer.com/mcp"
+    }
+  ]
 }

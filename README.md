@@ -32,6 +32,16 @@ Runs on Node 18 or newer. Add to your MCP client configuration:
 
 No key, no signup. The server only reads public endpoints.
 
+## Hosted endpoint (no install)
+
+The same three tools are served over HTTPS for clients that take a URL
+(Smithery, Claude, Cursor, Windsurf, custom agents):
+
+    https://mcp.thegoldbarometer.com/mcp
+
+Streamable HTTP, stateless, no key. Rate limited per IP at the edge.
+`GET /health` answers `{"ok":true,"tools":3}`.
+
 ## Data and credit
 
 All figures come from the public API at [thegoldbarometer.com/data](https://thegoldbarometer.com/data/)
