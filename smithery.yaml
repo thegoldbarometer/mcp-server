@@ -1,0 +1,9 @@
+# Smithery (smithery.ai) listing: how to start this stdio server.
+# No configuration: the data is a public API, no key, no account.
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties: {}
+  commandFunction: |-
+    (config) => ({ command: "node", args: ["dist/index.js"] })
