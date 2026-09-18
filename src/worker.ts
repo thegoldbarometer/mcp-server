@@ -24,11 +24,17 @@ const json = (body: unknown, status = 200, headers: Record<string, string> = {})
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
-    if (url.pathname === "/" && request.method === "GET") {
-      return new Response(ROOT_TEXT, { headers: { "content-type": "text/plain; charset=utf-8" } });
+    const isRead = request.method === "GET" || request.method === "HEAD";
+    if (url.pathname === "/" && isRead) {
+      return new Response(request.method === "HEAD" ? null : ROOT_TEXT, {
+        headers: { "content-type": "text/plain; charset=utf-8" },
+      });
     }
-    if (url.pathname === "/health" && request.method === "GET") {
-      return json({ ok: true, tools: 3, version: SERVER_INFO.version });
+    if (url.pathname === "/health" && isRead) {
+      const body = { ok: true, tools: 3, version: SERVER_INFO.version };
+      return request.method === "HEAD"
+        ? new Response(null, { headers: { "content-type": "application/json" } })
+        : json(body);
     }
     if (url.pathname !== "/mcp") return new Response("not found", { status: 404 });
     if (request.method !== "POST") {
